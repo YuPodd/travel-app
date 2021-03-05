@@ -1,0 +1,7 @@
+.footer_wrapper {
+    display: flex;
+    justify-content: space-between;
+}
+.github_wrapper > a{
+    margin-left: 10%;
+}
