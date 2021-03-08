@@ -1,5 +1,4 @@
 import React from 'react';
-import './App.css';
 import './styles/bootstrap.min.css'
 import './styles/components_styles.css'
 
