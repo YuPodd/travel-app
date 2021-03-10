@@ -1,8 +1,9 @@
-import React, { Component } from 'react';
+import React from "react";
 
-import Header from './Header';
+import Header from "./Header";
+import { Link } from "react-router-dom";
 
-export class Main extends Component {
+export default class Main extends React.Component {
   constructor(){
     super();
     this.state = {
@@ -19,10 +20,15 @@ export class Main extends Component {
       <div>
         <Header  searchText={this.state.searchText} change={this.searchTextChange}/>
         <h1>main page</h1>
+      <ul>
+        {this.props.countries.map((country) => (
+          <li key={country.name}>
+            <Link to={`/${country.name}`}>{country.name}</Link>
+          </li>
+        ))}
+      </ul>
       </div>
     )
   }
 }
-
-export default  Main
 
