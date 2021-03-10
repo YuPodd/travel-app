@@ -1,17 +1,22 @@
-import React, { Component } from 'react';
+import React from "react";
 
-import Header from './Header';
+import Header from "./Header";
+import { Link } from "react-router-dom";
 
-export class Main extends Component {
-  render() {
-    return (
-      <div>
-        <Header></Header>
-        <h1>main page</h1>
-      </div>
-    )
-  }
+function Main(props) {
+  return (
+    <div>
+      <Header></Header>
+      <h1>main page</h1>
+      <ul>
+        {props.countries.map((country) => (
+          <li key={country.name}>
+            <Link to={`/${country.name}`}>{country.name}</Link>
+          </li>
+        ))}
+      </ul>
+    </div>
+  );
 }
 
-export default  Main
-
+export default Main;
