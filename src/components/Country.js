@@ -1,6 +1,4 @@
 import {React, Fragment }from "react";
-
-import Header from "./Header";
 import countriesData from "../constants/countries";
 import { useParams } from "react-router-dom";
 
@@ -9,7 +7,6 @@ function Country() {
   const country = countriesData.find((country) => country.name === name);
   return (
     <Fragment>
-      <Header></Header>
       <div>
         <section>
           <h3>{country.name}</h3>
@@ -20,6 +17,8 @@ function Country() {
       </div>
     </Fragment>
   );
+
+
 }
 
 export default Country;
