@@ -7,6 +7,7 @@ import Carousel from "./Carousel"
 function Country() {
   const { name } = useParams();
   const country = countriesData.find((country) => country.name === name);
+ 
   return (
     <Fragment>
     <Header isActive={false} change={null}/>
@@ -17,8 +18,8 @@ function Country() {
           <p>{country.capital}</p>
           <p>{country.info}</p>
         </section>
-        <Carousel />
-      </div>
+        <Carousel countryToCarousel = {country.gallery}/>
+        </div>
     </Fragment>
   );
 
