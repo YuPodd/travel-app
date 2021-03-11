@@ -19,3 +19,7 @@ body{
 .country_image{
     width: 50%;
 }
+.carousel_wrapper{
+    width: 70%;
+    margin:0 auto;
+}
