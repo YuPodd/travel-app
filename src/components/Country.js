@@ -2,6 +2,7 @@ import {React, Fragment }from "react";
 import Header from "./Header";
 import countriesData from "../constants/countries";
 import { useParams } from "react-router-dom";
+import Weather from './Weather/Weather';
 
 function Country() {
   const { name } = useParams();
@@ -16,6 +17,7 @@ function Country() {
           <p>{country.capital}</p>
           <p>{country.info}</p>
         </section>
+        <Weather />
       </div>
     </Fragment>
   );
