@@ -13,7 +13,7 @@ class Header extends Component {
   render() {
     return (
       <header>
-        <nav className="navbar navbar-dark bg-dark">
+        <nav className="navbar navbar-dark fixed-top bg-dark">
           <Link to="/" className="navbar-brand">Travel App</Link>
           {this.props.isActive ?
           <form className="form-inline my-2 my-lg-0">
