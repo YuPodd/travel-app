@@ -19,24 +19,23 @@ const WeatherDescription = ({weather}) => {
   return null;
 }
 
-export default function Weather() {
+export default function Weather({city, langApp}) {
   const weatherData = new GetWeather();
   const [weather, setWeather] = React.useState(null);
   const [isLoading, setIsLoading] = React.useState(false)
 
   React.useEffect(() => {
     setIsLoading(true);
-    weatherData.getWeather('Berlin', 'de').then((data) => {
+    weatherData.getWeather(city, langApp).then((data) => {
       setWeather(data);
       setIsLoading(false);
     });
 
-  }, [])
+  }, [city, langApp])
 
   const content = isLoading ? 'Loading...' : <WeatherDescription weather={ weather }/>
 
   return (
-
     <div className='widget-weather'>
       {content}
     </div>

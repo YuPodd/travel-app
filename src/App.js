@@ -7,22 +7,32 @@ import Main from "./components/Main";
 import Country from "./components/Country";
 import countriesData from "./constants/countries";
 
-function App() {
-  return (
+export default class App extends React.Component {
+  state = {
+    langApp: 'en'
+  }
+
+  changeLang = (langApp) => {
+    this.setState({langApp})
+  }
+
+  render() {
+    return (
     <div className="root">
       <Router>
         <Switch>
           <Route path="/:name">
-            <Country />
+            <Country langApp={this.state.langApp} changeLang={this.changeLang} />
           </Route>
           <Route path="/">
-            <Main countries={countriesData} />
+            <Main countries={countriesData} langApp={this.state.langApp} changeLang={this.changeLang} />
           </Route>
         </Switch>
       </Router>
       <Footer />
     </div>
-  );
+  )
+  }
+
 }
 
-export default App;

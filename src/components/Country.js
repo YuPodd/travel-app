@@ -3,13 +3,14 @@ import Header from "./Header";
 import countriesData from "../constants/countries";
 import { useParams } from "react-router-dom";
 import Weather from './Weather/Weather';
+import Currency from "./Currency/Currency";
 
-function Country() {
+export default function Country({langApp, changeLang}) {
   const { name } = useParams();
   const country = countriesData.find((country) => country.name === name);
   return (
     <Fragment>
-    <Header isActive={false} change={null}/>
+    <Header isActive={false} change={null} langApp={langApp} changeLang={changeLang}/>
       <div>
         <section>
           <h3>{country.name}</h3>
@@ -17,12 +18,9 @@ function Country() {
           <p>{country.capital}</p>
           <p>{country.info}</p>
         </section>
-        <Weather />
+        <Weather city={country.capital} langApp={langApp} />
+        <Currency />
       </div>
     </Fragment>
   );
-
-
 }
-
-export default Country;

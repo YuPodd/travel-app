@@ -1,4 +1,4 @@
-class GetWeather {
+export default class GetWeather {
   _API_KEY = '4df0b6980dd8470aa54193407203005';
   getWeather = async (city, lang) => {
     try {
@@ -15,5 +15,3 @@ class GetWeather {
     }
   }
 }
-
-export default GetWeather;
