@@ -59,3 +59,7 @@ a:hover{
     color: white;
 }
 
+.carousel_wrapper{
+    width: 70%;
+    margin:0 auto;
+}
