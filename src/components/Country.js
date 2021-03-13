@@ -2,13 +2,11 @@ import {React, Fragment, useContext }from "react";
 import Header from "./Header";
 import countriesData from "../constants/countries";
 import { useParams } from "react-router-dom";
-import Weather from './Weather/Weather';
-import Currency from "./Currency/Currency";
-import Context from "./Context";
+import Widget from "./Widget/Widget";
 
 export default function Country() {
   const { name } = useParams();
-  const value = useContext(Context);
+
   const country = countriesData.find((country) => country.name === name);
 
   return (
@@ -21,8 +19,7 @@ export default function Country() {
           <p>{country.capital}</p>
           <p>{country.info}</p>
         </section>
-        <Weather city={country.capital} langApp={value.lang} />
-        <Currency />
+        <Widget city={country.capital} money={ country.currency }/>
       </div>
     </Fragment>
   );
