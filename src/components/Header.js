@@ -12,7 +12,7 @@ export default class Header extends Component {
   handleClick = (e) => { e.preventDefault();  this.props.change(this.Input.value) }
 
   render() {
-    const {langApp, changeLang, isActive, text } = this.props;
+    const {isActive, text } = this.props;
     const searchForm = (
       <form className="form-inline my-2 my-lg-0">
         <input
@@ -36,7 +36,7 @@ export default class Header extends Component {
       <header>
         <nav className="navbar navbar-dark bg-dark">
           <Link to="/" className="navbar-brand">Travel App</Link>
-          <SelectLang langApp={langApp} changeLang={ changeLang }/>
+          <SelectLang />
           {isActive ? searchForm : null}
         </nav>
       </header>

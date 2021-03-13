@@ -1,13 +1,15 @@
+import { useContext } from 'react'
+import Context from '../Context'
 
-
-const SelectLang = ({langApp, changeLang}) => {
+const SelectLang = () => {
+  const value = useContext(Context);
 
   const onChangeLang = (e) => {
-    changeLang(e.target.value)
+    value.setLang(e.target.value)
   }
-  
+
   return (
-    <select value={langApp} onChange={onChangeLang}>
+    <select value={value.lang} onChange={onChangeLang}>
       <option value="en">EN</option>
       <option value="ru">RU</option>
       <option value="be">BE</option>

@@ -22,7 +22,6 @@ export default class Main extends React.Component {
   }
 
   render() {
-    const { langApp, changeLang } = this.props;
     const cards = countries.filter(this.filter).map((country) => (
       <li key={country.name}>
         <Link to={`/${country.name}`}>{country.name}</Link>
@@ -30,7 +29,7 @@ export default class Main extends React.Component {
     ))
     return (
       <div>
-        <Header isActive={true} langApp={langApp} changeLang={changeLang} text={this.state.searchText} change={this.search}/>
+        <Header isActive={true} text={this.state.searchText} change={this.search}/>
         <h1>main page</h1>
         <ul>
         {cards}
