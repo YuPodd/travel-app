@@ -2,7 +2,8 @@ import {React, Fragment }from "react";
 import Header from "./Header";
 import countriesData from "../constants/countries";
 import { useParams } from "react-router-dom";
-import Carousel from "./Carousel"
+import Carousel from "./Carousel";
+import CountryMap from "./CountryMap";
 
 function Country() {
   const { name } = useParams();
@@ -20,6 +21,7 @@ function Country() {
         </section>
         <Carousel countryToCarousel = {country.gallery}/>
         </div>
+        <CountryMap country={country}></CountryMap>
     </Fragment>
   );
 
