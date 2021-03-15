@@ -63,3 +63,9 @@ a:hover{
     width: 70%;
     margin:0 auto;
 }
+
+.leaflet-container {
+    position: relative;
+    height: 300px;
+    width: 100%;
+}
