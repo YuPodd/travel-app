@@ -9,7 +9,7 @@ export default class GetCurrency {
       // const responseRUB = await fetch(`https://api.ratesapi.io/api/latest?base=RUB&symbols=${val}`).then(data => data.json());
       const responseRUB = await fetch(`https://api.exchangeratesapi.io/latest?base=RUB&symbols=${val}`).then(data => data.json());
 
-      const responseAll = await Promise.all([responseUSD, responseEUR, responseRUB]);
+      const responseAll = await Promise.all([responseUSD, responseRUB]);
 
       return responseAll;
     } catch (error) {
