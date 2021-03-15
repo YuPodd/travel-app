@@ -1,7 +1,7 @@
 import {React, Fragment }from "react";
 import Country from "./Country";
 
-export default function Carousel({countryToCarousel}){
+export default function Carousel({galleryImage, galleryHeader, galleryInfo}){
 return(
   <section className="carousel_wrapper">
    
@@ -13,13 +13,25 @@ return(
   </ol>
   <div className="carousel-inner">
     <div className="carousel-item active">
-      <img className="d-block w-100" src={countryToCarousel[0]} alt="First slide"/>
+      <img className="d-block w-100" src={galleryImage[0]} alt="First slide"/>
+      <div class="carousel-caption d-none d-md-block">
+    <h5>{galleryHeader[0]}</h5>
+    <p>{galleryInfo[0]}</p>
+    </div>
     </div>
     <div className="carousel-item">
-      <img className="d-block w-100" src={countryToCarousel[1]} alt="Second slide"/>
+      <img className="d-block w-100" src={galleryImage[1]} alt="Second slide"/>
+      <div class="carousel-caption d-none d-md-block">
+    <h5>{galleryHeader[1]}</h5>
+    <p>{galleryInfo[1]}</p>
+    </div>
     </div>
     <div className="carousel-item">
-      <img className="d-block w-100" src={countryToCarousel[2]} alt="Third slide"/>
+      <img className="d-block w-100" src={galleryImage[2]} alt="Third slide"/>
+      <div class="carousel-caption d-none d-md-block">
+    <h5>{galleryHeader[2]}</h5>
+    <p>{galleryInfo[2]}</p>
+    </div>
     </div>
   </div>
   <a className="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">

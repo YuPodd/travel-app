@@ -24,7 +24,7 @@ export default function Country() {
         </section>
       </div>
       <Video src={country.vid}/>
-      <Carousel countryToCarousel = {country.gallery}/>
+      <Carousel galleryImage = {country.galleryImage} galleryHeader={country.galleryHeader} galleryInfo={country.galleryInfo} />
       <Widget city={country.capital} money={ country.currency }/>
       <CountryMap country={country}></CountryMap>
     </Fragment>
