@@ -9,7 +9,7 @@ export default class Main extends React.Component {
   constructor(){
     super();
     this.state = {
-      searchText: '', 
+      searchText: '',
     }
   }
   search = (value) =>{
@@ -17,10 +17,10 @@ export default class Main extends React.Component {
   }
 
   filter = (country) => {
-    return this.state.searchText === '' ? true : 
+    return this.state.searchText === '' ? true :
     (country.name.toLowerCase().indexOf(this.state.searchText.toLocaleLowerCase()) !== -1 ||
     country.capital.toLowerCase().indexOf(this.state.searchText.toLocaleLowerCase()) !== -1 ? true: false)
-   }
+  }
 
   render() {
     const cards = countries.filter(this.filter).map((country) => (
