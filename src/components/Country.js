@@ -5,6 +5,7 @@ import { useParams } from "react-router-dom";
 import Widget from "./Widget/Widget";
 import Carousel from "./Carousel";
 import CountryMap from "./CountryMap";
+import Video from './Video'
 
 export default function Country() {
   const { name } = useParams();
@@ -22,6 +23,7 @@ export default function Country() {
           <p>{country.info}</p>
         </section>
       </div>
+      <Video src={country.vid}/>
       <Carousel countryToCarousel = {country.gallery}/>
       <Widget city={country.capital} money={ country.currency }/>
       <CountryMap country={country}></CountryMap>
