@@ -34,7 +34,7 @@ export default class Header extends Component {
 
     return (
       <header>
-        <nav className="navbar navbar-dark bg-dark">
+        <nav className="navbar navbar-dark fixed-top bg-dark">
           <Link to="/" className="navbar-brand">Travel App</Link>
           <SelectLang />
           {isActive ? searchForm : null}
