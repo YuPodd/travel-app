@@ -8,13 +8,17 @@ import Main from "./components/Main";
 import Country from "./components/Country";
 import countriesData from "./constants/countries";
 
+import {  withTranslation, Trans, useTranslation } from 'react-i18next'
+
 function App() {
+  const { t, i18n } = useTranslation();
+
   return (
     <div className="root">
       <Router>
         <Switch>
           <Route path="/:name">
-            <Country />
+             <Country />
           </Route>
           <Route path="/">
             <Main countries={countriesData} />
@@ -26,4 +30,4 @@ function App() {
   );
 }
 
-export default App;
+export default withTranslation("translations")(App);

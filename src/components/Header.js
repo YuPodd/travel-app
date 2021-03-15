@@ -1,21 +1,29 @@
 import React, {Component} from 'react';
 import {Link} from "react-router-dom";
+import { Trans, useTranslation } from 'react-i18next'
 
-class Header extends Component {
-  componentDidMount() {
-    this.props.isActive ? this.Input.focus() : this.Input = null;
-  }
+function Header() {
+  const { t, i18n } = useTranslation();
+  const changeLanguage = lng => {
+    i18n.changeLanguage(lng);
+  };
 
-  handleChange = (e) => {this.props.change(e.target.value) }
-  handeEnter = (e) => { this.props.change(e.target.value) }
-  handleClick = (e) => { e.preventDefault();  this.props.change(this.Input.value) } 
+  // componentDidMount() {
+  //   this.props.isActive ? this.Input.focus() : this.Input = null;
+  // }
 
-  render() {
+  // handleChange = (e) => {this.props.change(e.target.value) }
+  // handeEnter = (e) => { this.props.change(e.target.value) }
+  // handleClick = (e) => { e.preventDefault();  this.props.change(this.Input.value) } 
+
+ 
     return (
       <header>
         <nav className="navbar navbar-dark fixed-top bg-dark">
           <Link to="/" className="navbar-brand">Travel App</Link>
-          {this.props.isActive ?
+          <button onClick={() => changeLanguage("ru")}>ru</button>
+          <button onClick={() => changeLanguage("en")}>en</button>
+          {/* {this.props.isActive ?
           <form className="form-inline my-2 my-lg-0">
             <input
               className="form-control mr-sm-2"
@@ -32,11 +40,11 @@ class Header extends Component {
               type="submit"
               onClick={this.handleClick}
               >Search</button>
-          </form> : ''}
+          </form> : ''} */}
         </nav>
       </header>
     )
-  }
+
 }
 
 export default Header
