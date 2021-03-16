@@ -1,7 +1,7 @@
 import React from "react";
-import Header from "./Header";
+import Header from "../Header";
 import { Link } from "react-router-dom";
-import countries from "../constants/countries";
+import countries from "../../constants/countries";
 import CountryCard from './CountryCard';
 
 export default class Main extends React.Component {
@@ -30,7 +30,7 @@ export default class Main extends React.Component {
     return (
       <div>
         <Header isActive={true} text={this.state.searchText} change={this.search}/>
-        <div className="content__container">
+        <div className="main-page-content__container">
           {cards}
         </div>
       </div>

@@ -5,6 +5,7 @@ import Weather from "../Weather/Weather"
 const Widget = ({city, money}) => {
   return (
     <div className='widget'>
+      
       <Weather city={city} />
       <Currency money={money} />
     </div>

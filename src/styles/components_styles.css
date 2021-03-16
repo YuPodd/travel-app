@@ -3,24 +3,34 @@ body{
     position: relative;
     padding-bottom: 60px;
 }
+
+.root {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
 .footer{
     position: absolute;
     bottom: 0;
     width: 100%;
     height: 60px;
 }
+
 .footer_wrapper {
     display: flex;
     justify-content: space-between;
 }
+
 .github_wrapper > a{
-    margin-left: 10%;
+  margin-left: 10%;
 }
+
 .country_image{
     width: 50%;
 }
 
-.content__container{
+.main-page-content__container{
     width: 100%;
 
     display: flex;
@@ -59,13 +69,4 @@ a:hover{
     color: white;
 }
 
-.carousel_wrapper{
-    width: 70%;
-    margin:0 auto;
-}
 
-.leaflet-container {
-    position: relative;
-    height: 300px;
-    width: 100%;
-}
