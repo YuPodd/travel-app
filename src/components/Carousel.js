@@ -1,10 +1,10 @@
 import {React, Fragment }from "react";
-import Country from "./Country";
+
 
 export default function Carousel({galleryImage, galleryHeader, galleryInfo}){
 return(
   <section className="carousel_wrapper">
-   
+
 <div id="carouselExampleIndicators" className="carousel slide" data-ride="carousel">
   <ol className="carousel-indicators">
     <li data-target="#carouselExampleIndicators" data-slide-to="0" className="active"></li>

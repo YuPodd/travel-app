@@ -76,6 +76,11 @@ video {
 
 .map-toggler {
   position: relative;
+  outline: none;
+  background-color: black;
+  border: 1px solid black;
+  color: white;
+  opacity: 0.5;
 }
 
 video {
