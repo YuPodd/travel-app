@@ -4,8 +4,8 @@ import 'bootstrap';
 import "./styles/bootstrap.min.css";
 import "./styles/components_styles.css";
 import Footer from "./components/Footer";
-import Main from "./components/Main";
-import Country from "./components/Country";
+import Main from "./components/main-page.component/Main";
+import CountryPage from "./components/countru-page.component/CountryPage";
 import countriesData from "./constants/countries";
 import Context from "./components/Context";
 
@@ -24,7 +24,7 @@ export default function App() {
         <Router>
           <Switch>
             <Route path="/:name">
-              <Country />
+              <CountryPage />
             </Route>
             <Route path="/">
               <Main countries={countriesData} />
