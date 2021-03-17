@@ -322,7 +322,7 @@ const RussiaFR = addCountryInfo(
   "RUB",
   [russia_1, russia_2, russia_3, russia_4, russia_5, russia_6],
   ["Kremlin", "Théâtre Bolchoï", "Place Rouge", "Mont Elbrus", "Lac Baïkal", "Vallée des Geysers"],
-  ["complexe fortifié du XVe siècle qui couvre une superficie de 275 000 mètres carrés entouré de murs construits dans les années 1400.", "Le théâtre Bolchoï abrite la plus grande et l'une des plus anciennes compagnies de ballet et d'opéra au monde","Un espace massif de 330 mètres sur 70 mètres, la place est flanquée du Kremlin, du Mausolée de Lénine, de deux cathédrales et du Musée historique d'État", " À 5 642 mètres (18 510 pieds), Elbrus est inclus comme l'un des Sept Les sommets, les plus hauts sommets de chacun des sept continents de la planète, attirent les alpinistes expérimentés et novices.", "Le lac Baïkal est le lac le plus profond et le plus ancien de la Terre.", 'La vallée des Geysers est le deuxième plus grand champ de geyser au monde.']
+  ["complexe fortifié du XVe siècle qui couvre une superficie de 275 000 mètres carrés entouré de murs construits dans les années 1400.", "Le théâtre Bolchoï abrite la plus grande et l'une des plus anciennes compagnies de ballet et d'opéra au monde","Un espace massif de 330 mètres sur 70 mètres, la place est flanquée du Kremlin, du Mausolée de Lénine, de deux cathédrales et du Musée historique d'État", " À 5 642 mètres (18 510 pieds), Elbrus est inclus comme l'un des Sept Les sommets, les plus hauts sommets de chacun des sept continents de la planète, attirent les alpinistes expérimentés et novices.", "Le lac Baïkal est le lac le plus profond et le plus ancien de la Terre.", 'La vallée des Geysers est le deuxième plus grand champ de geyser au monde.'],
   [55.75222, 37.61556]
 );
 
