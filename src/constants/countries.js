@@ -342,7 +342,6 @@ const NetherlandsEN = addCountryInfo(
 
 const NetherlandsRU = addCountryInfo(
   "The Netherlands",
-  "The Netherlands",
   "Нидерланды",
   netherlands_img,
   netherlands_vid,
@@ -356,7 +355,6 @@ const NetherlandsRU = addCountryInfo(
 );
 
 const NetherlandsDE = addCountryInfo(
-  "The Netherlands",
   "The Netherlands",
   "Niederlande",
   netherlands_img,
