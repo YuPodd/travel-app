@@ -1,6 +1,5 @@
 import {React, Fragment}from "react";
 import Header from "../Header";
-import countriesData from "../../constants/countries";
 import { useParams } from "react-router-dom";
 import Widget from "../Widget/Widget";
 import Carousel from '../Carousel';
@@ -8,10 +7,11 @@ import Video from './Video';
 import CountryDescription from './CountryDescription';
 import './country-page.css';
 
-export default function CountryPage() {
+export default function CountryPage({countries}) {
+
   const { name } = useParams();
 
-  const country = countriesData.find((country) => country.name === name);
+  const country = countries.find((country) => country.label === name);
 
   return (
     <Fragment>

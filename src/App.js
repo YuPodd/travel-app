@@ -6,7 +6,7 @@ import "./styles/components_styles.css";
 import Footer from "./components/Footer";
 import Main from "./components/main-page.component/Main";
 import CountryPage from "./components/countru-page.component/CountryPage";
-import countriesData from "./constants/countries";
+import getCoutryList from "./constants/countries";
 import Context from "./components/Context";
 
 export default function App() {
@@ -17,17 +17,16 @@ export default function App() {
     setLang
   }
 
-
   return (
     <Context.Provider value={val}>
       <div className="root">
         <Router>
           <Switch>
             <Route path="/:name">
-              <CountryPage />
+              <CountryPage countries={getCoutryList(val.lang)} />
             </Route>
             <Route path="/">
-              <Main countries={countriesData} />
+              <Main countries={getCoutryList(val.lang)} />
             </Route>
           </Switch>
         </Router>

@@ -35,8 +35,10 @@ export default class Header extends Component {
     return (
       <header>
         <nav className="navbar navbar-dark fixed-top bg-dark">
-          <Link to="/" className="navbar-brand">Travel App</Link>
-          <SelectLang />
+          <div className='label-wrapper'>
+            <Link to="/" className="navbar-brand">Travel App</Link>
+            <SelectLang />
+          </div>
           {isActive ? searchForm : null}
         </nav>
       </header>

@@ -28,7 +28,7 @@ const DateClock = ({city}) => {
 
     return () => clearInterval(timerID);
   }, [])
-  console.log(toMainLetter(date))
+
   return (
     <div className='widget-date-clock'>
       <div className='date' >{toMainLetter(date)}</div>
