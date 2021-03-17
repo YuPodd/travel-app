@@ -8,9 +8,14 @@ export default function CountryMap(props) {
       center={props.country.location}
       zoom={10}
       maxZoom={20}
-      noWrap={true}
+      attributionControl={true}
+      zoomControl={true}
+      doubleClickZoom={true}
+      scrollWheelZoom={true}
+      dragging={true}
+      animate={true}
+      easeLinearity={0.35}
       >
-        <button>open</button>
       <Marker position={props.country.location} />
       <TileLayer
           attribution='&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a> &copy; <a href="http://cartodb.com/attributions">CartoDB</a>'
