@@ -8,7 +8,7 @@ const Widget = ({city, money}) => {
     <div className='widget'>
       <Weather city={city} />
       <Currency money={money} />
-      <DateClock />
+      <DateClock city={ city }/>
     </div>
   )
 }
