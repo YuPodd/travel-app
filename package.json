@@ -9,6 +9,7 @@
     "bootstrap": "^4.6.0",
     "jquery": "^3.6.0",
     "leaflet": "^1.7.1",
+    "leaflet.fullscreen": "^2.0.0",
     "node-sass": "^5.0.0",
     "popper.js": "^1.16.1",
     "react": "^17.0.1",

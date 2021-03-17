@@ -19,7 +19,6 @@ export default function CountryPage({countries}) {
       <Header isActive={false} change={null}/>
       <div className="country-page-content__container">
         <Widget city={country.capital} money={ country.currency }/>
-        <h3 className='country-name__header'>{country.name}</h3>
         <Carousel galleryImage = {country.galleryImage} galleryHeader={country.galleryHeader} galleryInfo={country.galleryInfo} />
         <CountryDescription country={country} />
         <Video src={country.vid}/>

@@ -14,20 +14,6 @@ video {
   width: 100%;
 }
 
-.country-name__header {
-  position: absolute;
-  top: 90vh;
-  width: 90%;
-
-  display: block;
-  padding: 20px;
-
-  background-color: black;
-  opacity: 0.5;
-
-  z-index: 16;
-}
-
 .country-description__container {
   min-height: 90vh;
   margin: 50px 0;
@@ -37,9 +23,9 @@ video {
 }
 
 .country-description__content{
-  min-width: 300px;
+  min-width: 265px;
   width: 70%;
-  height: 88vh;
+  min-height: 88vh;
   padding: 10px;
 
   display: flex;
@@ -50,24 +36,25 @@ video {
   background-color: rgba(000, 000, 000, 0.4);
   border: 1px solid white;
 }
+
 .full-screen-map__container{
   position: fixed;
-  top: 0;
+  top: 48px;
   left: 0;
-  height: 100vh;
-  width: 100vw;
+  height: Calc(100vh - 48px);
+  width: 100%;
 }
 
 .map__container{
   position: relative;
   height: 250px;
-  min-width: 300px;
+  min-width: 250px;
   width: 100%;
 }
 
 .leaflet-container {
   width: 100%;
-  height: Calc(100% - 25px);
+  height: 100%;
   z-index: 5;
 
   border: 1px solid black;
@@ -75,12 +62,18 @@ video {
 }
 
 .map-toggler {
-  position: relative;
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  width: 30px;
+  height: 30px;
+
   outline: none;
-  background-color: black;
-  border: 1px solid black;
-  color: white;
-  opacity: 0.5;
+  border: none;
+  border-radius: 3px;
+
+  background-size: contain;
+  z-index: 20;
 }
 
 video {

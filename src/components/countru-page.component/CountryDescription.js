@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import CountryMap from './CountryMap';
+import logo from '../../assets/open_window_logo.png';
 
 export default function CountryDescription(props) {
   const [fullScreenMap, setFullScreenMap] = useState(false);
@@ -11,12 +12,12 @@ export default function CountryDescription(props) {
         <p>{props.country.capital}</p>
         <p>{props.country.info}</p>
         <div className={fullScreenMap ? 'full-screen-map__container': 'map__container'}>
-          <button className="map-toggler" onClick={() => setFullScreenMap(!fullScreenMap)}>open map</button>
           <CountryMap country={props.country}></CountryMap>
+          <button
+            className="map-toggler" onClick={() => setFullScreenMap(!fullScreenMap)}
+            style={{backgroundImage: `url(${logo})`}}></button>
         </div>
-
       </div>
-
     </div>
   )
 }
