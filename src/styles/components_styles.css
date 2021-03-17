@@ -69,4 +69,15 @@ a:hover{
     color: white;
 }
 
+.label-wrapper {
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: baseline;
+  justify-content: center;
+}
+
+.select-lang {
+  cursor: pointer;
+}
+
 
