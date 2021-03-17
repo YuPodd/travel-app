@@ -1,12 +1,12 @@
 .widget{
   position: absolute;
-  top: 50px;
-  right: 5.3%;
-  background-color: rgba(0, 0, 0, 0.3);
+  top: 48px;
+  right: 5%;
+  background-color: rgba(0, 0, 0, 0.5);
   padding: 20px;
   border-radius: 8px;
   display: flex;
   flex-flow: column nowrap;
-  row-gap: 20px;
+  row-gap: 15px;
   z-index: 2;
 }

@@ -21,7 +21,7 @@ function getTimeZone(currentCity) {
 
 function toMainLetter(str) {
   const firstLetter = str[0].toUpperCase();
-  const remnant = str.slice(1, str.length - 1);
+  const remnant = str.slice(1, str.length);
   return firstLetter + remnant;
 };
 

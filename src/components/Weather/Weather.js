@@ -1,19 +1,20 @@
 import React from 'react';
+import './Weather.css';
 import GetWeather from '../../services/getWeather';
 import Context from '../Context';
 
 const WeatherDescription = ({weather}) => {
   if (weather) {
     return(
-      <>
+      <div className='widget-weather'>
         <div className='weather__descr'>
           <span>{ weather.current.condition.text }</span>
         </div>
-        <img src={weather.current.condition.icon} alt='weather' width='42px' height='42px' />
+        <img src={weather.current.condition.icon} alt='weather' width='48px' height='48px' />
         <div className='weather__temp'>
-          <span>{ weather.current.temp_c }</span>
+          <span>{ weather.current.temp_c }&deg;</span>
         </div>
-      </>
+      </div>
     )
   }
   return null;
