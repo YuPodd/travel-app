@@ -23,7 +23,7 @@ export default class Main extends React.Component {
 
   render() {
     const cards = this.props.countries.filter(this.filter).map((country) => (
-      <Link to={`/${country.name}`}>
+      <Link to={`/${country.label}`}>
         <CountryCard country={country} ></CountryCard>
       </Link>
     ))
