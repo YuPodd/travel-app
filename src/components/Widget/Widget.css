@@ -1,0 +1,12 @@
+.widget{
+  position: absolute;
+  top: 48px;
+  right: 5%;
+  background-color: rgba(0, 0, 0, 0.5);
+  padding: 20px;
+  border-radius: 8px;
+  display: flex;
+  flex-flow: column nowrap;
+  row-gap: 15px;
+  z-index: 2;
+}
